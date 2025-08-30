@@ -1,0 +1,33 @@
+- ! Aviečių uogienė
+- ? Avietės
+- ! Avižų gėrimas
+- ! Bananai
++ ? Bulvės
+- ! Burokėliai
+- ! Druska
+- ? Džiovinti krapai
++ ? Grietinė
++ . Imbieras
++ . Karis
+- ? Kefyras
+- ! Kiaušiniai
++ ? Kokosų gėrimas
++ . Kopūstai
++ ? Laurų lapai
++ . Maltos aitriosios paprikos
++ ? Morkos
++ ? Pienas UAT
++ . Paprikos
++ ? Pomidorų pasta
++ . Rausvieji svogūnai
++ . Ridikėliai
+- ? Skumbrė
++ ? Sviestas
++ . Sviestinis moliūgas
+- ! Svogūnai
+- ? Svogūnų laiškai
+- ? Šilauogės
++ ? Špinatai
++ . Trumpavaisiai agurkai
+- ? Viščiukų blauzdelės
+- ? Viščiukų filė

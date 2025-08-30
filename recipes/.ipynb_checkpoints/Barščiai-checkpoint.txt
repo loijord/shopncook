@@ -1,0 +1,12 @@
+* 1 kg vištienos [item: viščiukų blauzdelės]
+* 300 g kopūstų [item: kopūstai]
+* 200 g bulvių [item: bulvės]
+* 2 burokėliai [weight: 200g]
+* 1 morka [item: morkos, weight: 120g]
+* 1 svogūnas [item: svogūnai, weight: 200g]
+* 1 paprika [item: paprikos, weight: 200g]
+* 1 šaukštas pomidorų pastos [item: pomidorų pasta, weight: 20g]
+* aliejus
+* laurų lapai
+* druska
+* pipirai

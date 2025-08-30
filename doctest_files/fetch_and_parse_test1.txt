@@ -1,0 +1,1591 @@
+<html>
+ <head>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag("consent", "default", {
+        ad_personalization: "denied",
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        analytics_storage: "denied",
+        functionality_storage: "denied",
+        personalization_storage: "denied",
+        security_storage: "granted",
+        wait_for_update: 500,
+    });
+    gtag("set", "ads_data_redaction", true);
+    gtag("set", "url_passthrough", true);
+  </script>
+  <script>
+   (() => {
+        window.cshtml = window.cshtml || {}
+        window.cshtml.jsResources = window.cshtml.jsResources || {}
+        window.cshtml.resourceWaits = window.cshtml.resourceWaits || {}
+
+        const jsResources = window.cshtml.jsResources
+        const resourceWaits = window.cshtml.resourceWaits
+
+        window.cshtml.setJsResource = (resourceId, jsResource) => {
+            jsResources[resourceId] = jsResource
+
+            if (resourceWaits[resourceId]) {
+                resourceWaits[resourceId].forEach(wait => wait.resolve(jsResource))
+                delete resourceWaits[resourceId]
+            }
+        }
+
+        const makeDeferred = () => {
+            let result = {}
+
+            result.promise = new Promise((resolve, reject) => {
+                result.resolve = resolve
+                result.reject = reject
+            })
+
+            return result
+        }
+
+        window.cshtml.getJsResource = (resourceId) => {
+            if (jsResources[resourceId]) {
+                return Promise.resolve(jsResources[resourceId])
+            } else {
+                resourceWaits[resourceId] = resourceWaits[resourceId] || []
+                const deferred = makeDeferred()
+                resourceWaits[resourceId].push(deferred)
+                return deferred.promise
+            }
+        }
+    })();
+  </script>
+  <script async="" data-blockingmode="manual" data-cbid="33674a8c-6191-434b-b932-692483e4f6c4" id="Cookiebot" src="https://consent.cookiebot.com/uc.js" type="text/javascript">
+  </script>
+  <script src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   AppleID.auth.init({
+        clientId : 'lt.barbora.signin',
+        scope : 'name email',
+        redirectURI : 'https://barbora.lt',
+        state : 'origin:web',
+        usePopup : true
+    });
+  </script>
+  <meta charset="utf-8"/>
+  <meta content="app-id=903888629" name="apple-itunes-app"/>
+  <meta content="" name="description"/>
+  <meta content="" name="og:description"/>
+  <meta content="website" name="og:type"/>
+  <meta content="Aviečių uogienė SKANOVĖ, 900 g | BARBORA" name="og:title"/>
+  <meta content="Barbora" name="og:sitename"/>
+  <link href="https://barbora.lt/produktai/avieciu-uogiene-skanove-900-g" rel="canonical"/>
+  <meta content="19ljatf5u9i2dlkrt4sqjawoeo8qdb" name="facebook-domain-verification"/>
+  <link href="/Assets/Images/logo-square.png" rel="image_src"/>
+  <meta content="https://cdn.barbora.lt/products/a1dda9b4-1afd-4589-b2eb-27ad1ee9e5ba_m.png" name="og:image"/>
+  <link href="/Assets/Images/favicon.ico" rel="shortcut icon"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css"/>
+  <link href="/Assets/Styles/main.css?v=1.36.5" rel="stylesheet" type="text/css"/>
+  <title>
+   Aviečių uogienė SKANOVĖ, 900 g | BARBORA
+  </title>
+  <script type="text/javascript">
+   window.currentPage = "allPages";
+
+        // Solution for 'can't find variable: _AutofillCallbackHandler' error on Instagram/Facebook browsers with iOS
+        window._AutofillCallbackHandler = window._AutofillCallbackHandler || function(){}
+  </script>
+  <script src="/shared/translationsasscript?languageShortname=LT" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   // these are needed in order not to have to hardcode urls in JavaScript
+        // and to be able to change route names and not to break links
+
+        window.b_urls = {
+            home: "/",
+            cart: "/krepselis",
+            search: "/paieska",
+            searchSuggestions: "/paieskos-pasiulymai",
+            product: "/produktai",
+            timeslots: "/pristatymas",
+            payment: "/atsiskaitymas",
+            userInfoNew: "/mano-duomenys",
+            eShopApiBaseUrl: window.location.origin + "/api/eshop/v1/",
+            popUpCampaignImageUrlTemplate: window.location.origin + "/api/images/GetPopUpCampaignImage?id=",
+            recommendations: "/rekomendacijos",
+            recipes: "receptai",
+            cookieConsent: "javascript: CookieConsent.renew()",
+            login: "/prisijungti",
+            register: "/registruotis",
+            remindPassword: "/priminti-slaptazodi",
+            paymentSuccess: "/payment/paymentsuccess",
+            paymentFailure: "/payment/paymentfailure",
+            paymentPartialSuccess: "/payment/paymentpartialsuccess",
+            paymentReturnUrl: "/payment/paymentreturnurl",
+            neopayReturnUrl: "/payment/neopayreturnurl",
+            paymentsServiceBaseUrl: "https://production-elb.barbora.lt/api" + "/v1/payments/adyen",
+            paymentsServiceGenericUrl: "https://production-elb.barbora.lt/api" + "/v1/payments",
+            goodPriceShopInShopUrl: "prekiu-grupe/skoniu-dienos",
+            drugstore: "parduotuves/NO_TRANSLATION_FOUND_b7f1d14e-88de-4be9-af1e-dd64900382fc",
+            categoriesServiceUrl: "https://production-elb.barbora.lt/api/cache/v1/country/LT",
+            shopInShop: "parduotuves/",
+            kevinServiceBaseUrl: "https://production-elb.barbora.lt/api" + "/v1/payments/kevin",
+            neoPayServiceBaseUrl: "https://production-elb.barbora.lt/api" + "/v1/payments/neopay",
+            inventoryGroup: "/prekiu-grupe",
+            specialOffers: "/akcijos",
+            myItems: "/mano-prekes",
+            loyaltyOffers: "/aciu-kaina",
+            promotionLandingPage: "",
+            nextPaymentPage: '/checkout',
+        };
+
+        window.b_data = {
+            clientHostId: "135",
+            versionNumber: "v1.36.5",
+            clientVersion: "1.36.5",
+            CMSToken: "Bearer UNSOBiSDfbCQZVAsn0Qvyhw8OpjkkjRy",
+            companyNameFull: "UAB „Barbora“",
+            companyName: "Barbora",
+            enviromentLocation: "LT",
+            enviroment: "PRD",
+            loyaltyCardInfoLink: "https://www.maxima.lt/aciu",
+            customerSupportEmail: "pagalba@barbora.lt",
+            customerSupportPhone: "+370 5 230 9309",
+            androidAppDownloadLink: "https://play.google.com/store/apps/details?id=lt.barbora",
+            iOsAppDownloadLink: "https://itunes.apple.com/us/app/appname/id903888629?ls=1&amp;mt=8",
+            socialLinks: [{"name":"fb-badge","link":"https://www.facebook.com/BarboraLietuvoje"},{"name":"inst-badge","link":"https://www.instagram.com/barbora.lt"},{"name":"linkedin-badge","link":"https://www.linkedin.com/company/barbora"},{"name":"yt-badge","link":"https://www.youtube.com/channel/UCmJSZ6m1bE0HBVABg0FMSAA"}] || [],
+            customerDataRouteName: "mano-duomenys",
+            TranslationsPlaceholderMatchingRegex: "{([0-9])+:(.+?)}",
+            authCookieName: ".BRBAUTH",
+            mainDonationsCategoryId: "e1bf074e-b5bc-403f-aaf6-775cb4f545f4",
+            donationsUrlFragment: "aukojimas",
+            deliveryMethodType: {"Address":1,"PickupPoint":3,"DriveIn":4},
+            couponTypes: {"FlatDiscount":1,"FreeDelivery":2,"PercentageDiscount":3,"GiftCoupon":4},
+            enviromentLocations: {"Lithuania":"LT","Latvia":"LV","Estonia":"EE"},
+            recipesRecommendationsCategoryId: "9daad16a-8e7f-4b24-9e79-faf8af9055c9",
+            recipesSlugToIgnore: "kategorija",
+            shouldShowRecipes: "True",
+            shouldShowDriveInCameraPartial: false,
+            regionShortId: "LT_MAIN_WEB",
+            isCentralEshopClientUrl: true,
+            showCustomerCouponsModal: "False".toLowerCase() == "true",
+            shouldShowRefactoredCoupons: "False".toLowerCase() == "true",
+            currencySymbol: "€",
+            isInfoPageStandalone: "False".toLowerCase() === "true",
+            selectedLanguageData: {
+                id: "e8d3e291-bb2e-47e6-a827-a2189b00a441".toLowerCase(),
+                name: "Lietuvių",
+                shortName: "LT",
+                translationFilePath: "/Assets/Translations/lt.json?v=v1.36.5",
+                locale: "lt"
+            },
+            availableLanguages: [{"Id":"e8d3e291-bb2e-47e6-a827-a2189b00a441","Name":"Lietuvių","CultureName":"lt-LT","IsDefault":true,"PositionNumber":1,"ShortName":"LT","AvailableForAdmin":true,"AvailableForWeb":true},{"Id":"1595dc26-9ecc-4c7d-b26e-badffc19c6b5","Name":"English","CultureName":"en","IsDefault":false,"PositionNumber":2,"ShortName":"EN","AvailableForAdmin":true,"AvailableForWeb":true},{"Id":"909b6b59-bf29-497c-80e4-1c844f1849c7","Name":"Русский","CultureName":"ru","IsDefault":false,"PositionNumber":3,"ShortName":"RU","AvailableForAdmin":true,"AvailableForWeb":true}],
+            featureFlagRegistrationConfirmation: "true",
+            emailRegex: "^[a-zA-Z0-9_.+-]+@(?!\\.)(?!.*?\\.\\.)(?!.*\\.$)[a-zA-Z0-9-]+\\.(?!\\.)(?!.*?\\.\\.)(?!.*\\.$)[a-zA-Z0-9-.]+$",
+            phoneNumberRegex: "^(\\+(43|32|357|420|45|372|358|33|49|30|36|353|39|371|370|352|356|31|48|351|421|386|34|46|44|47|41|380))(\\d{7,15})$",
+            isAnalyticSearchEnabled: "True".toLowerCase() === "true",
+            isConstructorSearchEnabled: "False".toLowerCase() === "true",
+            featureFlagAciuCard: "true",
+            featureFlagHideDonationsBlock: "false",
+            featureFlagHideDepositPriceIfZero: "false",
+            featureFlagJitsu: "true",
+            shouldShowEkoMenuItem: "True".toLowerCase() === "true",
+            shouldShowDrugStoreMenuItem: "False".toLowerCase() === "true",
+            isSocialLoginRegistrationEnabled: "True".toLowerCase() === "true",
+            cardPaymentClientKey: "live_KOTARO7SLNAAVDF53C2JB7OFH4VO62QA",
+            isPopularCategoriesEnabled: "False".toLowerCase() === "true",
+            isShowAlcohol: "true",
+            isNewLoyaltyPromoActive: "true" === "True",
+            jitsuWebKey: "js.31djxulhz1grvselnyy3km.u1u0j44zutmxb3v1boi",
+            jitsuTrackingHostUrl: "https://production-elb.barbora.lt/",
+            liveChatEnabled: "True".toLowerCase() === "true",
+            is1EurOfferMenuItemEnabled: "True".toLowerCase() === "true",
+            isEmailSubscriptionBarEnabled: "True".toLowerCase() === "true",
+            isRedirectToNextPaymentPageEnabled: "True".toLowerCase() === "true",
+            barboraNextAdyenValueZero: "False".toLowerCase() === "true",
+            availablePaymentSources: "[{&quot;image&quot;:&quot;https://cdn.barbora.lt/payments/gray-seb.png&quot;,&quot;id&quot;:&quot;1&quot;},{&quot;image&quot;:&quot;https://cdn.barbora.lt/payments/gray-swed.png&quot;,&quot;id&quot;:&quot;2&quot;},{&quot;image&quot;:&quot;https://cdn.barbora.lt/payments/gray-luminor.png&quot;,&quot;id&quot;:&quot;3&quot;},{&quot;image&quot;:&quot;https://cdn.barbora.lt/payments/gray-card-on-delivery-LT.png&quot;,&quot;id&quot;:&quot;4&quot;,&quot;translation&quot;:&quot;Common.RegisterANewCard&quot;},{&quot;image&quot;:&quot;https://cdn.barbora.lt/payments/gray-mastercard.png&quot;,&quot;id&quot;:&quot;5&quot;},{&quot;image&quot;:&quot;https://cdn.barbora.lt/payments/gray-visa.png&quot;,&quot;id&quot;:&quot;6&quot;}]",
+            newPricingAndPromosEnabled: "True".toLowerCase() === "true", //! TODO remove this after new pricing and promo feature is fully released
+            areBannerMobileImagesEnabled: "True".toLowerCase() === "true",
+            paymentProvider: "NEOPAY",
+            isAllOfferProductsButtonEnabled: "True".toLowerCase() === "true",
+            isNextHeaderAndNavigationEnabled: "False".toLowerCase() === "true",
+            apiVersion: "1.36.3",
+            isCarPickUpDeliveryTypeEnabled: "False".toLowerCase() === "true",
+            isDaysOfTasteMenuItemHidden: "False".toLowerCase() === "true",
+            isInformationBannerEnabled: "True".toLowerCase() === "true",
+            isConsentSplittingEnabled: "False".toLowerCase() === "true",
+            isBuyAndWinCategoryForLVEnabled: "True".toLowerCase() === "true"
+        };
+
+        window.b_user_info = null;
+
+        window.b_js_routes = [{"RouteName":"customerDataChangePhone","Url":"NO_TRANSLATION_FOUND_c31d2379-124a-4b2b-8b35-6abb9a27a4ce","ControllerName":null,"ActionName":null,"SequenceInRouting":0,"Active":true,"IsReactRoute":false},{"RouteName":"customerDataPagesList","Url":"/","ControllerName":null,"ActionName":null,"SequenceInRouting":41,"Active":true,"IsReactRoute":false},{"RouteName":"customerDataAddressList","Url":"/prekiu-pristatymo-adresai","ControllerName":null,"ActionName":null,"SequenceInRouting":42,"Active":true,"IsReactRoute":false},{"RouteName":"customerDataAddressEdit","Url":"/prekiu-pristatymo-adresai/:id","ControllerName":null,"ActionName":null,"SequenceInRouting":43,"Active":true,"IsReactRoute":false},{"RouteName":"customerDataAddressAdd","Url":"/prekiu-pristatymo-adresai/prideti-adresa","ControllerName":null,"ActionName":null,"SequenceInRouting":44,"Active":true,"IsReactRoute":false},{"RouteName":"customerDataOrderHistory","Url":"/pirkimu-istorija","ControllerName":null,"ActionName":null,"SequenceInRouting":45,"Active":true,"IsReactRoute":false},{"RouteName":"customerDataAciuCard","Url":"/mano-aciu-kortele","ControllerName":null,"ActionName":null,"SequenceInRouting":46,"Active":true,"IsReactRoute":false},{"RouteName":"customerDataUserSettings","Url":"/vartotojo-nustatymai","ControllerName":null,"ActionName":null,"SequenceInRouting":47,"Active":true,"IsReactRoute":false},{"RouteName":"customerDataChangePassword","Url":"/vartotojo-nustatymai/keisti-slaptazodi","ControllerName":null,"ActionName":null,"SequenceInRouting":49,"Active":true,"IsReactRoute":false},{"RouteName":"customerDataOrderHistoryDetails","Url":"/pirkimu-istorija/:id","ControllerName":null,"ActionName":null,"SequenceInRouting":50,"Active":true,"IsReactRoute":false},{"RouteName":"customerDataSavedBaskets","Url":"/ruosiniai","ControllerName":null,"ActionName":null,"SequenceInRouting":51,"Active":true,"IsReactRoute":false},{"RouteName":"customerDataPaymentCards","Url":"/mokejimo-korteles","ControllerName":null,"ActionName":null,"SequenceInRouting":52,"Active":true,"IsReactRoute":false},{"RouteName":"customerDataSavedBasketsItem","Url":"/ruosiniai/:id","ControllerName":null,"ActionName":null,"SequenceInRouting":53,"Active":true,"IsReactRoute":false},{"RouteName":"customerDataCoupons","Url":"/kuponai","ControllerName":null,"ActionName":null,"SequenceInRouting":58,"Active":true,"IsReactRoute":false}];
+
+        window.b_js_urls = {};
+        window.b_js_routes.forEach(function (route) {
+            window.b_js_urls[route.RouteName] = window.b_urls.userInfoNew + route.Url;
+        });
+
+        window.b_react_routes = [{"RouteName":"recipesRecipe","Url":"/kategorija/:categoryUrlSlug/:recipeUrlSlug","ControllerName":null,"ActionName":null,"SequenceInRouting":67,"Active":true,"IsReactRoute":true},{"RouteName":"recipesCategory","Url":"/kategorija/:categoryUrlSlug","ControllerName":null,"ActionName":null,"SequenceInRouting":68,"Active":true,"IsReactRoute":true},{"RouteName":"recipesSavedRecipe","Url":"/issaugoti-receptai/:recipeUrlSlug","ControllerName":null,"ActionName":null,"SequenceInRouting":69,"Active":true,"IsReactRoute":true},{"RouteName":"recipesSaved","Url":"/issaugoti-receptai","ControllerName":null,"ActionName":null,"SequenceInRouting":70,"Active":true,"IsReactRoute":true},{"RouteName":"recipesSearch","Url":"/paieskos-rezultatai","ControllerName":null,"ActionName":null,"SequenceInRouting":71,"Active":true,"IsReactRoute":true}];
+
+        window.b_primary_routes = [{"RouteName":"OffersByCategoryThirdLevel","Url":"akcijos/{rootCategoryUrl}/{childCategoryUrl}/{grandChildCategoryUrl}","ControllerName":"OffersByCategory","ActionName":"Index","SequenceInRouting":27,"Active":true,"IsReactRoute":false},{"RouteName":"TagedProductsByCategoryThirdLevel","Url":"eko/{rootCategoryUrl}/{childCategoryUrl}/{grandChildCategoryUrl}","ControllerName":"TagedProductsByCategory","ActionName":"Index","SequenceInRouting":31,"Active":true,"IsReactRoute":false},{"RouteName":"Favourites","Url":"mano-prekes","ControllerName":"User","ActionName":"Favourites","SequenceInRouting":32,"Active":true,"IsReactRoute":false},{"RouteName":"NewsProductsByCategoryThirdLevel","Url":"naujienos/{rootCategoryUrl}/{childCategoryUrl}/{grandChildCategoryUrl}","ControllerName":"NewsProductsByCategory","ActionName":"Index","SequenceInRouting":55,"Active":true,"IsReactRoute":false},{"RouteName":"ShopInShop","Url":"parduotuves/{shopName}/{categoryName}","ControllerName":"ShopInShop","ActionName":"Index","SequenceInRouting":55,"Active":true,"IsReactRoute":false},{"RouteName":"recipes","Url":"receptai/{*url}","ControllerName":"Recipes","ActionName":"Index","SequenceInRouting":65,"Active":true,"IsReactRoute":false},{"RouteName":"AllLoyaltyOffersByCategoryThirdLevel","Url":"aciu-kaina/{rootCategoryUrl}/{childCategoryUrl}/{grandChildCategoryUrl}","ControllerName":"AllLoyaltyOffersByCategory","ActionName":"Index","SequenceInRouting":81,"Active":true,"IsReactRoute":false},{"RouteName":"OwnBrandProductsByCategoryThirdLevel","Url":"well-done/{rootCategoryUrl}/{childCategoryUrl}/{grandChildCategoryUrl}","ControllerName":"OwnBrandProductsByCategory","ActionName":"Index","SequenceInRouting":84,"Active":true,"IsReactRoute":false}];
+
+        window.b_info_pages = [{"Id":1,"Title":"Pirkimas","InfoPages":[{"Id":"c3f88428-2e51-4530-8f0a-0256ba2f3d5d","Title":"Pirkimo - pardavimo taisyklės","Url":"pirkimo-pardavimo-taisykles","AltUrl":null,"InfoPageCategoryId":1},{"Id":"c086c828-f73c-4abc-8839-c098dac3ed86","Title":"Akcijų ir žaidimų taisyklės","Url":"akciju-zaidimu-taisykles","AltUrl":null,"InfoPageCategoryId":1},{"Id":"7eb35834-8e05-43c9-b5ba-6609877e5cc7","Title":"Kuponų taisyklės","Url":"kuponu-taisykles","AltUrl":null,"InfoPageCategoryId":1},{"Id":"ce0009e1-ba4f-4815-b2dc-7287f4b54c0e","Title":"Atsiskaitymo būdai","Url":"atsiskaitymas","AltUrl":null,"InfoPageCategoryId":1},{"Id":"e0e7a022-d2e0-4510-9e49-3c7e6ebd71f8","Title":"Prekių pakaitalai","Url":"pakaitalu-naudojimas","AltUrl":null,"InfoPageCategoryId":1},{"Id":"e598b66c-1855-4df1-9a0c-21867d067913","Title":"Krepšelių ruošiniai","Url":"mano-prekes","AltUrl":null,"InfoPageCategoryId":1}]},{"Id":2,"Title":"Pristatymas","InfoPages":[{"Id":"4bb5875d-fa0f-4da8-b6d7-86ec8ed1857f","Title":"Prekių pristatymas","Url":"prekiu-pristatymas","AltUrl":null,"InfoPageCategoryId":2},{"Id":"4c37a9cb-d41a-4d60-b9c6-f5048eb49f7a","Title":"Aptarnaujamos teritorijos","Url":"aptarnaujamos-teritorijos","AltUrl":null,"InfoPageCategoryId":2},{"Id":"601cabad-87c0-4f78-b01d-82f55614f29b","Title":"Svarbi informacija","Url":"svarbi-informacija","AltUrl":null,"InfoPageCategoryId":2}]},{"Id":3,"Title":"Bendra informacija","InfoPages":[{"Id":"e9ba8932-22e9-4e97-91de-060d503cecb6","Title":"Prekių grąžinimas","Url":"prekiu-grazinimas","AltUrl":null,"InfoPageCategoryId":3},{"Id":"d18764ba-094a-4c9f-95ce-9a800f142f5c","Title":"Produktų kokybės užtikrinimas","Url":"produktu-kokybes-uztikrinimas","AltUrl":null,"InfoPageCategoryId":3},{"Id":"1e9df8b4-70f3-438c-b2ea-ae8eb01b93cf","Title":"Dažniausiai užduodami klausimai","Url":"duk","AltUrl":null,"InfoPageCategoryId":3},{"Id":"f66cde9d-49c9-4f28-a5aa-ce7e83a2c5e8","Title":"Prekių išdėstymas","Url":"prekiu-isdestymas","AltUrl":null,"InfoPageCategoryId":3},{"Id":"c9b39b69-136d-449a-8199-b033b4b2f323","Title":"AČIŪ paskyros taisyklės","Url":"aciu-paskyros-taisykles","AltUrl":"https://www.maxima.lt/aciu/lojalumo-programos-taisykles","InfoPageCategoryId":3},{"Id":"6eb2d217-2b35-43d3-ab0b-9b4d855dd7b6","Title":"Prekių pakavimas","Url":"prekiu-pakavimas","AltUrl":null,"InfoPageCategoryId":3}]},{"Id":4,"Title":"BARBORA","InfoPages":[{"Id":"f3ef0d75-b2f1-4681-98df-506b8d4cd4c2","Title":"Karjera","Url":"karjera","AltUrl":"https://karjera.barbora.lt/","InfoPageCategoryId":4},{"Id":"25d98742-6ae6-4fb4-ad56-8f736d760a41","Title":"Mobilioji programėlė","Url":"mobili-aplikacija","AltUrl":null,"InfoPageCategoryId":4},{"Id":"7a0a3486-bca4-40e9-8db2-5bfe8d62952b","Title":"Privatumo politika","Url":"privatumo-politika","AltUrl":null,"InfoPageCategoryId":4},{"Id":"f0447346-2dea-4e00-b93b-153fc6a2889c","Title":"Socialinė atsakomybė","Url":"korupcijos-prevencija","AltUrl":null,"InfoPageCategoryId":4},{"Id":"f2945e29-2d59-4335-ac61-4a1f99ae8968","Title":"Pranešėjų apsauga","Url":"praneseju-apsauga","AltUrl":null,"InfoPageCategoryId":4},{"Id":"45472c55-78b3-4cef-8cc2-c7a9ad148659","Title":"Prieinamumas","Url":"prieinamumas","AltUrl":null,"InfoPageCategoryId":4},{"Id":"500ae8d1-c55c-46b9-abf3-6ae838ec687b","Title":"WCAG 2.2 atitikties ataskaita","Url":"wcag-2-2-atitikties-ataskaita","AltUrl":null,"InfoPageCategoryId":4},{"Id":"54c5cba9-c107-482b-ad5c-4a0d2ad08511","Title":"EN 301 549 atitikties ataskaita","Url":"en-301-549-atitikties-ataskaita","AltUrl":null,"InfoPageCategoryId":4}]}] || [];
+        if (window.b_info_pages.length > 0) {
+            window.b_info_pages.map(function (cols) {
+                return cols.InfoPages.map(function (page) {
+                    var urlString = "/info/urltoreplace";
+                    return Object.assign(page, { FullUrl: urlString.replace("urltoreplace", page.Url) })
+                });
+            });
+        }
+  </script>
+  <script data-cookieconsent="statistics" type="text/plain">
+   // google analytics
+        (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga("create", "UA-45214439-1", "auto", { allowLinker: true });
+
+        ga("require", "ec");
+
+            
+                ga('set', 'dimension1', '000000000000524444'); // dynx_itemid == Data Feed ID
+                ga('set', 'dimension2', ''); // dynx_itemid2 == Data Feed ID2
+                ga('set', 'dimension3', 'offerdetail'); // dynx_pagetype
+                ga('set', 'dimension4', '5.19'); // dynx_totalvalue == Data Feed Sale Price / Price (jeigu yra - akcijos kaina, jeigu ne, įprasta kaina)
+            
+
+        var customerId = '';
+        if (customerId !== null && customerId !== undefined && customerId !== "") {
+            ga('set', 'userId', customerId);
+        }
+        ga('send', 'pageview');
+  </script>
+  <script data-cookieconsent="marketing" type="text/plain">
+   //Facebook Pixel init
+    !function (f, b, e, v, n, t, s) {
+    if (f.fbq) return; n = f.fbq = function () {
+    n.callMethod ?
+    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+    }; if (!f._fbq) f._fbq = n;
+    n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+    t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+    }(window,
+    document, 'script', '//connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '3887632427920498');
+    fbq('track', "PageView");
+  </script>
+  <script>
+   function Deferred() {
+		var self = this;
+		this.promise = new Promise(function(resolve, reject) {
+		  self.reject = reject
+		  self.resolve = resolve
+		})
+    }
+    window.fbLoaded = (new Deferred());
+
+    //Facebook SDK init
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '238416694705627',
+            xfbml: true,
+            version: "v8.0",
+        });
+        fbLoaded.resolve()
+    };
+
+    (function (d, s, id) {
+        var js,
+            fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "facebook-jssdk");
+  </script>
+  <script type="text/javascript">
+   var userActions = {
+            click: "click",
+            elementClick: "elementClick",
+            detail: "detail",
+            addToCart: "addToCart",
+            removeFromCart: "removeFromCart",
+            checkoutStepRecommendations: "checkout-step-recommendations",
+            checkoutStepViewBasket: "checkout-step-view-basket",
+            checkoutStepShipping: "checkout-step-shipping",
+            checkoutStepPayment: "checkout-step-payment",
+            checkoutStepReceipt: "checkout-step-receipt",
+            purchase: "purchase",
+            completeRegistration: "CompleteRegistration",
+            impression: "impression",
+            internalPromotionClick: "internalPromotionClick",
+            promotionView: "promotionView",
+            promotionClick: "promotionClick",
+            checkoutStep: "checkoutStep",
+            login: "login",
+            register: "register",
+            adyenPayments: "adyenPayments",
+            couponProgramActivation: "couponProgramActivation"
+        };
+
+        var gaEventCategories = {
+            product: "product",
+            cart: "cart",
+            checkout: "checkout",
+            customer: "customer",
+            promotions: "promotions"
+        };
+
+        var reportToFacebook = function (action, data) {
+            if (typeof fbq === 'undefined') {
+                console.info("fbq is undefined");
+                return;
+            }
+            if (data === undefined) {
+                fbq('track', action);
+            }
+            else {
+                fbq('track', action, data);
+            }
+        };
+
+        var getInfoForFacebookFromProductList = function (products) {
+            return {
+                "content_ids": products.map(function (inv) { return inv.id; }),
+                "content_type": "product",
+                "contents": products.map(function (inv) {
+                    var sUnit = inv.units ? inv.units.find(function (obj) { return obj.unit === 'kg' }) : undefined;
+                    if (sUnit === undefined) {
+                        sUnit = inv.unit;
+                    }
+                    return {
+                        "id": inv.id,
+                        "quantity": inv.quantity_unit_independent ? inv.quantity_unit_independent : inv.quantity,
+                        "item_price": sUnit ? sUnit.price : inv.price
+                    }
+                })
+            };
+        }
+
+        var getInfoForFacebookFromProduct = function (product, value, currency) {
+            return {
+                "content_ids": product.id,
+                "content_type": "product",
+                "value": value,
+                "currency": currency
+            }
+        }
+
+        var getInfoForGoogleAnalyticsFromProductInfo = function (product, isImpression) {
+            if (isImpression !== true) {
+                isImpression = false;
+            }
+
+        
+
+        var productData = {};
+            var missingFields = [];
+            if (product.id !== null && product.id !== undefined) {
+                productData.id = product.id;
+            } else {
+                missingFields.push("id");
+            }
+
+            if (product.title !== null && product.title !== undefined) {
+                productData.name = product.title;
+            } else {
+                missingFields.push("title");
+            }
+
+            if (product.brand_name !== null && product.brand_name !== undefined) {
+                productData.brand = product.brand_name;
+            }
+
+            if (product.category_name_full_path !== null && product.category_name_full_path !== undefined) {
+                productData.category = product.category_name_full_path;
+            } else {
+                missingFields.push("category_name_full_path");
+            }
+
+            if (
+                (
+                    product.unit !== null &&
+                    product.unit !== undefined &&
+                    product.unit.price !== null &&
+                    product.unit.price !== undefined
+                ) ||
+                (
+                    product.price !== null &&
+                    product.price !== undefined
+                )
+            ) {
+                try {
+                    productData.price = product.unit.price;
+                } catch (e) {
+                    productData.price = product.price;
+                }
+            } else {
+                missingFields.push("price");
+            }
+
+            if (product.product_position_in_list !== null && product.product_position_in_list !== undefined) {
+                productData.position = product.product_position_in_list;
+            }
+
+            if (isImpression === false) {
+                if (product.quantity_unit_independent !== null && product.quantity_unit_independent !== undefined) {
+                    productData.quantity = product.quantity_unit_independent < 1 ? 1 : product.quantity_unit_independent;
+                } else if (product.quantity !== null && product.quantity !== undefined) {
+                    productData.quantity = product.quantity < 1 ? 1 : product.quantity;
+                }
+            }
+
+            if (isImpression === true) {
+                if (product.list !== null && product.list !== undefined) {
+                    productData.list = `${product.list} - ${product.sectionName}`;
+                } else {
+                    missingFields.push("list");
+                }
+            }
+
+            if (missingFields.length > 0) {
+                console.warn("missing fields: " + missingFields.join(", "));
+            }
+            return productData;
+        };
+
+        var gaIntercept = function () {
+            if (typeof ga === 'undefined') {
+                console.info('ga is undefined');
+                return;
+            }
+            var argumentsExcludingFirst = Array.prototype.slice.call(arguments, 1);
+
+            ga.apply(this, argumentsExcludingFirst);
+        };
+
+        var reportUserActionToThirdParty = function (action, data) {
+            var defaultCurrency = "EUR";
+            var dataForFb = null;
+            switch (action) {
+                case userActions.click:
+                    gaIntercept(userActions.click, "ec:addProduct", getInfoForGoogleAnalyticsFromProductInfo(data));
+                    gaIntercept(userActions.click, "ec:setAction", "click", {
+                        list: data.list
+                    });
+                    gaIntercept(userActions.click, "send", "event", gaEventCategories.product, action);
+                    break;
+
+                case userActions.detail:
+                    //gaIntercept(userActions.detail, "ec:addImpression", getInfoForGoogleAnalyticsFromProductInfo(data, true));
+                    gaIntercept(userActions.detail, "ec:addProduct", getInfoForGoogleAnalyticsFromProductInfo(data));
+                    gaIntercept(userActions.detail, "ec:setAction", "detail");
+                    gaIntercept(userActions.detail, "send", "event", gaEventCategories.product, action);
+                    dataForFb = getInfoForFacebookFromProduct(data, data.price, defaultCurrency);
+                    reportToFacebook("ViewContent", dataForFb);
+                    break;
+
+                case userActions.addToCart:
+                    gaIntercept(userActions.addToCart, "ec:addProduct", getInfoForGoogleAnalyticsFromProductInfo(data));
+                    gaIntercept(userActions.addToCart, "ec:setAction", "add", {
+                        list: `${data.list} - ${data.sectionName}`
+                    });
+                    gaIntercept(userActions.addToCart, "send", "event", gaEventCategories.cart, action);
+                    dataForFb = getInfoForFacebookFromProductList([data]);
+                    reportToFacebook("AddToCart", dataForFb);
+                    break;
+
+                case userActions.removeFromCart:
+                    gaIntercept(userActions.removeFromCart, "ec:addProduct", getInfoForGoogleAnalyticsFromProductInfo(data));
+                    gaIntercept(userActions.removeFromCart, "ec:setAction", "remove");
+                    gaIntercept(userActions.removeFromCart, "send", "event", gaEventCategories.cart, action);
+                    break;
+
+                case userActions.checkoutStepRecommendations:
+                    data.forEach(function (product) {
+                        gaIntercept(userActions.checkoutStepRecommendations, "ec:addProduct", getInfoForGoogleAnalyticsFromProductInfo(product));
+                    });
+                    gaIntercept(userActions.checkoutStepRecommendations, "ec:setAction", "checkout", {
+                        "step": 1
+                    });
+                    gaIntercept(userActions.checkoutStepRecommendations, "send", "event", gaEventCategories.checkout, action);
+                    break;
+
+                case userActions.checkoutStepViewBasket:
+                    data.forEach(function (product) {
+                        gaIntercept(userActions.checkoutStepViewBasket, "ec:addProduct", getInfoForGoogleAnalyticsFromProductInfo(product));
+                    });
+                    gaIntercept(userActions.checkoutStepViewBasket, "ec:setAction", "checkout", {
+                        "step": 2
+                    });
+                    gaIntercept(userActions.checkoutStepViewBasket, "send", "event", gaEventCategories.checkout, action);
+                    break;
+
+                case userActions.checkoutStepShipping:
+                    data.forEach(function (product) {
+                        gaIntercept(userActions.checkoutStepShipping, "ec:addProduct", getInfoForGoogleAnalyticsFromProductInfo(product));
+                    });
+                    gaIntercept(userActions.checkoutStepShipping, "ec:setAction", "checkout", {
+                        "step": 3
+                    });
+                    gaIntercept(userActions.checkoutStepShipping, "send", "event", gaEventCategories.checkout, action);
+                    break;
+
+                case userActions.checkoutStepPayment:
+                    data.forEach(function (product) {
+                        gaIntercept(userActions.checkoutStepPayment, "ec:addProduct", getInfoForGoogleAnalyticsFromProductInfo(product));
+                    });
+                    gaIntercept(userActions.checkoutStepPayment, "ec:setAction", "checkout", {
+                        "step": 4
+                    });
+                    gaIntercept(userActions.checkoutStepPayment, "send", "event", gaEventCategories.checkout, action);
+                    break;
+
+                case userActions.checkoutStepReceipt:
+                    try {
+                        data.inventoryInfo.forEach(function (product) {
+                            gaIntercept(userActions.checkoutStepReceipt, "ec:addProduct", getInfoForGoogleAnalyticsFromProductInfo(product));
+                        });
+                        gaIntercept(userActions.checkoutStepReceipt, "ec:setAction", "checkout", {
+                            "step": 5,
+                            "option": data.paymentSource
+                        });
+                        gaIntercept(userActions.checkoutStepReceipt, "send", "event", gaEventCategories.checkout, action);
+
+                    } catch (e) {
+                        globalThis.report.error('Error while processing checkout step receipt', err, {
+                            data: JSON.stringify(data),
+                        })
+                        console.log(e);
+                    }
+                    break;
+
+                case userActions.purchase:
+                    dataForFb = getInfoForFacebookFromProductList(data.products);
+                    dataForFb["value"] = data.orderPrice;
+                    dataForFb["currency"] = defaultCurrency;
+                    reportToFacebook("Purchase", dataForFb);
+
+                    // report to ga
+
+                    if (data.products !== null && data.products !== undefined && Array.isArray(data.products)) {
+                        data.products.forEach(function (product) {
+                            gaIntercept(userActions.purchase, "ec:addProduct", getInfoForGoogleAnalyticsFromProductInfo(product));
+                        });
+
+                        var purchaseData = {
+                            "id": data.orderId,
+                            "affiliation": data.shopCode,
+                            "revenue": data.orderPrice,
+                            "shipping": data.deliveryPrice,
+                        };
+
+                        if (data.coupon !== undefined && data.coupon !== null) {
+                            purchaseData.coupon = data.coupon;
+                        }
+
+                        gaIntercept(userActions.purchase, "ec:setAction", "purchase", purchaseData);
+
+                        gaIntercept(userActions.purchase, "send", "event", gaEventCategories.checkout, action);
+                    }
+
+                    break;
+
+                case userActions.internalPromotionClick:
+
+                    gaIntercept(userActions.internalPromotionClick, "ec:addPromo", {
+                        "id": data.id,
+                        "name": data.name,
+                        "position": data.position
+                    });
+                    gaIntercept(userActions.internalPromotionClick, "ec:setAction", "promo_click");
+                    gaIntercept(userActions.internalPromotionClick, "send", "event", "Internal Promotions", "click", data.name);
+                    break;
+
+                case userActions.impression:
+                    data.forEach(function (product) {
+                        gaIntercept(userActions.impression, "ec:addImpression", getInfoForGoogleAnalyticsFromProductInfo(product, true));
+                    });
+                    gaIntercept(userActions.impression, "send", "event", gaEventCategories.product, action);
+                    break;
+
+                case userActions.completeRegistration:
+                    gaIntercept(userActions.completeRegistration, "send", "event", gaEventCategories.customer, action);
+                    reportToFacebook(action, data);
+                    break;
+
+                default:
+                    reportToFacebook(action, data);
+            }
+        };
+
+
+        var reportUserActionToGtm = function (action, data, sectionTitle = null) {
+            window.dataLayer = window.dataLayer || [];
+            switch (action) {
+                case userActions.click:
+                    window.dataLayer.push({
+                        event: "click",
+                        elementName: data
+                    });
+                    break;
+                case userActions.elementClick:
+                    window.dataLayer.push({
+                        event: "elementClick",
+                        elementName: data,
+                        sectionName: sectionTitle
+                    });
+                    break;
+
+                case userActions.addToCart:
+                    window.dataLayer.push({
+                        event: "eec.add",
+                        ecommerce: data,
+                    });
+                    break;
+
+                case userActions.promotionView:
+                    try {
+                        window.dataLayer.push({
+                            event: "eec.promotionView",
+                            ecommerce: data,
+                        });
+                    } catch (err) {
+                        const { id, name, creative } = data;
+                        globalThis.report.error('Error while reporting promotionView event to gtm', err, {
+                            id,
+                            name,
+                            creative
+                        })
+                    }
+                    break;
+
+                case userActions.promotionClick:
+                    window.dataLayer.push({
+                        event: "eec.promotionClick",
+                        ecommerce: data,
+                    });
+                    break;
+
+                case userActions.checkoutStep:
+                    window.dataLayer.push({
+                        event: "eec.ecommerce",
+                        ecommerce: data,
+                    });
+                    break;
+
+                case userActions.login:
+                    window.dataLayer.push({
+                        event: "eec.login",
+                        login: data,
+                    });
+                    break;
+
+                case userActions.register:
+                    window.dataLayer.push({
+                        event: "register",
+                        register: data
+                    });
+
+                case userActions.adyenPayments:
+                    window.dataLayer.push({
+                        event: "adyenPayments",
+                        adyenPayments: data
+                    });
+                case userActions.couponProgramActivation:
+                    window.dataLayer.push({
+                        event: "couponProgramActivation",
+                        couponProgram: data
+                    });
+
+                default:
+                    break;
+            }
+        };
+  </script>
+  <script>
+   var ga4EventTypes = {
+        viewItemList: "view_item_list",
+        viewItem: "view_item",
+        viewPromotion: "view_promotion",
+        selectPromotion: "select_promotion",
+        addToCart: "add_to_cart",
+        removeFromCart: "remove_from_cart",
+        beginCheckout: "begin_checkout",
+        purchase: "purchase",
+        socialRegisterStart: "social_register_start",
+        socialRegisterEnd: "social_register_end",
+        socialLogin: "social_login",
+        viewCategory: "view_category",
+        clickCategory: "click_category",
+        clickRegistration: "click_registration",
+        clickRegistrationTab: "click_registration_tab"
+    };
+
+    var reportUserActionToGa4 = function(eventType, eCommerceObj) {
+        window.dataLayer = window.dataLayer || []
+
+        window.dataLayer.push({ecommerce: null}); // Clear ecommerce obj as recommended
+        
+        dataLayerObj = {
+            event: eventType,
+            ecommerce: eCommerceObj,
+        };
+
+        window.dataLayer.push(dataLayerObj);
+    };
+  </script>
+  <script type="text/javascript">
+   (function(w,d,s,l,i) {
+            w[l]=w[l]||[];
+            w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+            })(window, document, 'script', 'dataLayer', 'GTM-THFN689');
+
+            window.dataLayer = window.dataLayer || [];
+            var customerId = "";
+            if (customerId !== null && customerId !== undefined) {
+            window.dataLayer.push({
+            'userID': customerId
+            })
+            }
+  </script>
+  <script data-cookieconsent="statistics" type="text/plain">
+   (function (h, o, t, j, a, r) {
+        h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+        h._hjSettings = { hjid: '1873641', hjsv: 6 };
+        a = o.getElementsByTagName('head')[0];
+        r = o.createElement('script'); r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
+  <!-- Start SmartBanner configuration -->
+  <meta content="BARBORA" name="smartbanner:title"/>
+  <meta content="Apsipirk patogiau per&lt;br/&gt;programėlę!" name="smartbanner:author"/>
+  <meta content="/Assets/Images/icons/barbora-logo-lt-512.png" name="smartbanner:icon-apple"/>
+  <meta content="/Assets/Images/icons/barbora-logo-lt-512.png" name="smartbanner:icon-google"/>
+  <meta content="Atidaryti" name="smartbanner:button"/>
+  <meta content="https://apps.apple.com/lt/app/barbora-lt/id903888629" name="smartbanner:button-url-apple"/>
+  <meta content="intent://home#Intent;scheme=barbora;package=lt.barbora;S.browser_fallback_url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dlt.barbora;end" name="smartbanner:button-url-google"/>
+  <meta content="android,ios" name="smartbanner:enabled-platforms"/>
+  <meta content="Uždaryti" name="smartbanner:close-label"/>
+  <meta content="/" name="smartbanner:hide-path"/>
+  <meta content="604800000" name="smartbanner:hide-ttl"/>
+  <!-- End SmartBanner configuration -->
+  <script data-cookieconsent="statistics" type="text/javascript">
+   (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "sbp2flojnp");
+  </script>
+ </head>
+ <body class="b-page--product">
+  <script type="text/javascript">
+   // load svg icons, cached by browser
+        var ajax = new XMLHttpRequest();
+        ajax.open("GET", "/Assets/Images/svg-compiled/symbol/svg/sprite.symbol.svg" + "?v=1.36.5", true);
+        ajax.setRequestHeader("Cache-Control", "max-age=" + "2592000");
+        ajax.send();
+        ajax.onload = function () {
+            var div = document.createElement("div");
+            div.style.display = "none";
+            div.innerHTML = ajax.responseText;
+            document.body.insertBefore(div, document.body.childNodes[0]);
+        }
+  </script>
+  <noscript>
+   <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-THFN689" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <div class="b-app" style="visibility: hidden;">
+   <div class="b-app-bg tw-bg-neutral-100">
+    <div class="b-alert--warning b-ie-warning" style="display:none;">
+     Jūs naudojate pasenusią interneto naršyklę. Apsipirksite greičiau ir patogiau, jei atsisiųsite naujausią
+     <a href="https://www.google.com/chrome/browser/desktop/index.html" target="blank">
+      Google Chrome
+     </a>
+     arba
+     <a href="https://www.mozilla.org/lt/firefox/new/" target="_blank">
+      Mozilla
+                        Firefox
+     </a>
+     versiją.
+    </div>
+    <script type="text/javascript">
+     function sendLoginClickEvent() {
+        var login = {
+            loginType: "email",
+            clicked_login: true
+        };
+        window.reportUserActionToGtm("login", login);
+    }
+    </script>
+    <div class="b-header-mobile">
+     <div class="b-mobile-sticky-menu" id="b-mobile-sticky-menu">
+      <div id="mobile-newsletter-subscription-placeholder">
+      </div>
+      <div id="mobile-information-banner-placeholder">
+      </div>
+      <ul class="b-top-menu b-top-menu-mobile">
+       <div class="b-top-menu--shop-page-links">
+        <li class="b-top-menu-item b-top-menu-item--container">
+         <button class="b-top-menu-item-link b-trigger-mobile-menu" id="fti-mobile-menu">
+         </button>
+         <a class="b-logo--main" href="/">
+          <svg class="b-icon b-logo--eshop-main" style="">
+           <use xlink:href="#barbora-logo">
+           </use>
+          </svg>
+         </a>
+        </li>
+       </div>
+       <li class="b-top-menu-item b-help-btn--container">
+        <button class="b-top-menu-item-link b-login-register--button b-login-register--key b-login-register--login" onclick="sendLoginClickEvent()">
+         <svg class="b-icon" style="">
+          <use xlink:href="#login">
+          </use>
+         </svg>
+        </button>
+       </li>
+      </ul>
+      <div class="b-search-mobile">
+       <div class="b-search--placeholder">
+       </div>
+      </div>
+     </div>
+    </div>
+    <script type="text/javascript">
+     var sendLoginClickEvent = () => {
+        const login = {
+            loginType: "email/social",
+            clicked_login: true
+        };
+        window.reportUserActionToGtm("login", login);
+    }
+
+    var sendRegisterClickEvent = () => {
+        const register = {
+            registrationType: "email/social",
+            clicked_register: true
+        };
+        window.reportUserActionToGtm("register", register);
+    }
+    </script>
+    <header class="b-header">
+     <div id="desktop-newsletter-subscription-placeholder">
+     </div>
+     <div id="desktop-information-banner-placeholder">
+     </div>
+     <div class="b-header-top">
+      <div class="container-fluid">
+       <script type="text/javascript">
+        var sendLoginClickEvent = () => {
+            const login = {
+                loginType: "email/social",
+                clicked_login: true
+		    };
+		    window.reportUserActionToGtm("login", login);
+        }
+
+        var sendRegisterClickEvent = () => {
+            const register = {
+                registrationType: "email/social",
+                clicked_register: true
+            };
+            window.reportUserActionToGtm("register", register);
+        }
+       </script>
+       <div class="b-header--links">
+        <div class="b-header--links--items">
+         <div class="b-header-language--placeholder">
+         </div>
+        </div>
+        <div class="tw-flex tw-justify-center tw-items-center tw-gap-10">
+         <div id="login-register-buttons-placeholder">
+         </div>
+         <div class="b-help-btn--placeholder">
+         </div>
+        </div>
+       </div>
+       <div style="display: flex;">
+        <div class="b-social-login-google--placeholder">
+        </div>
+        <div class="b-social-register-google--placeholder">
+        </div>
+        <div class="b-social-login-fb--placeholder">
+        </div>
+        <div class="b-social-register-fb--placeholder">
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="b-header-bottom">
+      <div class="container-fluid">
+       <div class="b-header-bottom--wrapper">
+        <div class="b-header-bottom--block">
+         <a class="b-logo--main" href="/">
+          <svg class="b-icon" style="width: 100%; height: 100%; top: -3px;">
+           <use xlink:href="#barbora-logo">
+           </use>
+          </svg>
+         </a>
+         <div class="b-search--placeholder">
+         </div>
+        </div>
+        <div class="b-header-bottom--side b-header-hidden">
+         <div class="b-cart-and-delivery-in-header--placeholder">
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <div class="container-fluid">
+     <div class="b-main-content">
+      <div id="desktop-menu-placeholder">
+      </div>
+      <ol class="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList" style="padding-left: 0px;">
+       <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        <meta content="1" itemprop="position"/>
+        <a href="https://barbora.lt/" itemprop="item" title="Pagrindinis puslapis">
+         <span itemprop="name">
+          Pagrindinis puslapis
+         </span>
+        </a>
+       </li>
+       <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        <meta content="2" itemprop="position"/>
+        <a href="https://barbora.lt/bakaleja" itemprop="item" title="Bakalėja">
+         <span itemprop="name">
+          Bakalėja
+         </span>
+        </a>
+       </li>
+       <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        <meta content="3" itemprop="position"/>
+        <a href="https://barbora.lt/bakaleja/konservuotas-maistas" itemprop="item" title="Konservuotas maistas">
+         <span itemprop="name">
+          Konservuotas maistas
+         </span>
+        </a>
+       </li>
+       <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        <meta content="4" itemprop="position"/>
+        <a href="https://barbora.lt/bakaleja/konservuotas-maistas/uogienes-dzemai-ir-tyres" itemprop="item" title="Uogienės, džemai ir tyrės">
+         <span itemprop="name">
+          Uogienės, džemai ir tyrės
+         </span>
+        </a>
+       </li>
+      </ol>
+      <h1 class="tw-mb-4 tw-mt-1 tw-font-semibold tw-text-3xl">
+       Uogienės, džemai ir tyrės
+      </h1>
+      <div class="b-sidebar">
+       <div class="b-cart--placeholder">
+       </div>
+      </div>
+      <div class="b-page-specific-content">
+       <script>
+        async function ResendEmail() {
+            await fetch(`${window.b_urls.home}shared/ResendConfirmationEmail`);
+        }
+       </script>
+       <script type="text/javascript">
+        window.ageLimitationWarningValue = 0;
+       </script>
+       <script>
+        window.reportUserActionToGa4(window.ga4EventTypes.viewItem,
+        {
+            items: [{"item_id":"000000000000524444","item_name":"Aviečių uogienė SKANOVĖ, 900 g","currency":"eur","index":0,"item_brand":"SKANOVĖ","item_category":"Bakalėja","item_category2":"Konservuotas maistas","item_category3":"Uogienės, džemai ir tyrės","price":5.19,"discount":0.0,"quantity":null}]
+        });
+       </script>
+       <div class="b-page-container b-info-page-container" style="position: relative;text-align: justify;">
+        <div class="tw-flex tw-w-full" id="product-details-promo-placeholder_000000000000524444">
+        </div>
+        <div class="b-product-info b-product--js-hook" data-b-for-cart='{"id":"000000000000524444","product_position_in_list":null,"title":"Aviečių uogienė SKANOVĖ, 900 g","category_id":"c6c79b7a-9311-4c58-bbd1-64ace35d4044","category_name_full_path":"Bakalėja/Konservuotas maistas/Uogienės, džemai ir tyrės","root_category_id":"acb55842-a24c-44d1-b948-082e2cdb596b","brand_name":"SKANOVĖ","price":5.19,"image":"https://cdn.barbora.lt/products/a1dda9b4-1afd-4589-b2eb-27ad1ee9e5ba_s.png","comparative_unit":"kg","comparative_unit_price":5.77,"status":"active","popUpText":null,"age_limitation":null,"picking_actions":[],"list":"Prekės kortelė","sectionTitle":null,"quantity":1.0}' data-b-item-id="000000000000524444" data-b-promotion="" data-b-root-cat-id="acb55842-a24c-44d1-b948-082e2cdb596b" data-b-units='{"units": [{"id":0,"price":5.19,"unit":"vnt.","min":1.0,"max":6.0,"step":1.0,"defaultValue":1.0}]}' itemscope="" itemtype="http://schema.org/Product">
+         <meta content="" itemprop="description"/>
+         <div class="b-products-allow-desktop-view b-products-allow-mobile-view tw-max-w-full">
+          <div class="row tw-flex tw-items-center" style="padding-bottom: 24px;">
+           <div class="tw-relative col-md-6 tw-overflow-hidden">
+            <div class="b-product-goalgroups b-product-goalgroup--product-info-vertical clearfix">
+            </div>
+            <div class="b-product-info--pictures-wrap">
+             <div class="b-block-slider b-product-info--pictures" data-b-block-slider-params="{}">
+              <div class="b-block-slider--pager">
+               <button>
+               </button>
+              </div>
+              <div class="b-block-slider--inner">
+               <div class="b-block-slider--slide">
+                <img alt="Aviečių uogienė SKANOVĖ, 900 g" itemprop="image" onerror="this.onerror=null;this.src='/Assets/Images/svg/no-image-placeholder.svg';" src="https://cdn.barbora.lt/products/a1dda9b4-1afd-4589-b2eb-27ad1ee9e5ba_m.png"/>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <script>
+            ; (() => {
+                        const containerId = 'product-details-promo-placeholder_000000000000524444'
+                        const containerEl = document.getElementById(containerId)
+                        const promo = `null`
+                        const validUntil = ``
+                        const enabled = `True`
+
+                        if (enabled === 'True') {
+                            window.cshtml.getJsResource('renderProductLabel').then(renderProductLabel => renderProductLabel(containerEl, promo, validUntil))
+                        }
+                    })();
+           </script>
+           <div class="col-md-6" style="position:static; max-width:65%;">
+            <h1 class="b-product-info--title" itemprop="name">
+             Aviečių uogienė SKANOVĖ, 900 g
+            </h1>
+            <div class="b-product-goalgroups clearfix">
+             <button class="b-icon-favourite" id="fti-favorite-1">
+             </button>
+            </div>
+            <span class="favourites-tooltip-placeholder">
+            </span>
+            <div class="b-product-goalgroups b-product-goalgroup--vertical clearfix">
+            </div>
+            <div class="b-product-info--price-and-quantity">
+             <div id="b-product-info--price-placeholder" style="max-width:13rem;">
+             </div>
+             <script>
+              (() => {
+                                const containerEl = document.getElementById('b-product-info--price-placeholder')
+                                const pricePropsStr = `{&quot;currentPrice&quot;:5.19,&quot;comparativeUnitPrice&quot;:5.77,&quot;comparativeUnit&quot;:&quot;kg&quot;,&quot;isAtRecommendationsCarousel&quot;:false,&quot;containerRate&quot;:null,&quot;containerQty&quot;:null,&quot;showPromoSurrogate&quot;:false,&quot;promotion&quot;:null,&quot;isOwnBrand&quot;:false}`
+                                window.cshtml.getJsResource('renderPriceBlock').then(renderPriceBlock => renderPriceBlock(containerEl, pricePropsStr))
+                            })();
+             </script>
+             <div class="b-product-price-cart-link clearfix">
+              <div class="b-product-cart-link clearfix">
+               <div class="b-details-quantity-select--placeholder b-quantity-select--placeholder clearfix">
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="b-product-info-recommendations--wrap">
+          <div id="b-product-info-recommendations--placeholder">
+          </div>
+         </div>
+        </div>
+        <dl class="b-product-info--info-2">
+         <dt class="b-product-info--info-3-title">
+          Sudedamosios dalys
+         </dt>
+         <dd>
+          Cukrus, avietės 27%, vanduo, obuolių tyrė, tirštiklis pektinas, rūgštingumą reguliuojanti medžiaga citrinų rūgštis, purpurinių morkų koncentratas, kvapioji medžiaga, koncervantai: kalio sorbatas, natrio benzoatas.
+         </dd>
+         <dt class="b-product-info--info-3-title">
+          Maisto priedai
+         </dt>
+         <dd>
+          E330, E202, E211
+         </dd>
+         <dt class="b-product-info--info-3-title">
+          Gamintojo kontaktai
+         </dt>
+         <dd>
+          Aljasas, UAB
+         </dd>
+         <dt class="b-product-info--info-3-title">
+          Laikymo sąlygos
+         </dt>
+         <dd>
+          Atidarius laikyti šaltai
+Laikymo temperatūra: nuo 0°C iki 25°C.
+         </dd>
+         <dt class="b-product-info--info-3-title">
+          Pakuotė
+         </dt>
+         <dd>
+          Plastikas
+         </dd>
+        </dl>
+        <h3 class="b-product-info--info-3-title">
+         Maistinė vertė (100 g/ml)
+        </h3>
+        <div class="row">
+         <div class="col-md-4">
+          <table class="table table-striped table-condensed" style="margin-bottom:0">
+           <tbody>
+            <tr>
+             <td>
+              Energinė vertė
+             </td>
+             <td class="b-text-right">
+              710,00 kJ / 167,00 Kcal
+             </td>
+            </tr>
+            <tr>
+             <td>
+              Riebalai
+             </td>
+             <td class="b-text-right">
+              0,20 g
+             </td>
+            </tr>
+            <tr>
+             <td>
+              Sočiosios riebalų rūgštys
+             </td>
+             <td class="b-text-right">
+              0,00 g
+             </td>
+            </tr>
+            <tr>
+             <td>
+              Angliavandeniai
+             </td>
+             <td class="b-text-right">
+              41,00 g
+             </td>
+            </tr>
+            <tr>
+             <td>
+              Cukrūs
+             </td>
+             <td class="b-text-right">
+              38,00 g
+             </td>
+            </tr>
+            <tr>
+             <td>
+              Baltymai
+             </td>
+             <td class="b-text-right">
+              0,30 g
+             </td>
+            </tr>
+            <tr>
+             <td>
+              Druska
+             </td>
+             <td class="b-text-right">
+              0,00 g
+             </td>
+            </tr>
+           </tbody>
+          </table>
+         </div>
+        </div>
+        <h3 class="b-product-info--info-3-title">
+         Rekomenduojama paros norma
+        </h3>
+        <ul class="b-nutrients row">
+         <li class="col-xs-6">
+          <span class="b-nutrients--item">
+           <span class="b-nutrients--name">
+            Energinė vertė
+           </span>
+           <span class="b-nutrients--amount-wrap">
+            <span class="b-nutrients--amount b-nutrients--amount-small">
+             167 Kcal
+             <br/>
+             710 kJ
+             <br/>
+            </span>
+           </span>
+           <span class="b-nutrients--gda">
+            8,4%
+           </span>
+          </span>
+         </li>
+         <li class="col-xs-6">
+          <span class="b-nutrients--item">
+           <span class="b-nutrients--name">
+            Riebalai
+           </span>
+           <span class="b-nutrients--amount-wrap">
+            <span class="b-nutrients--amount">
+             0,2 g
+             <br/>
+            </span>
+           </span>
+           <span class="b-nutrients--gda">
+            0,3%
+           </span>
+          </span>
+         </li>
+         <li class="col-xs-6">
+          <span class="b-nutrients--item">
+           <span class="b-nutrients--name">
+            Sočiosios riebalų rūgštys
+           </span>
+           <span class="b-nutrients--amount-wrap">
+            <span class="b-nutrients--amount">
+             0 g
+             <br/>
+            </span>
+           </span>
+           <span class="b-nutrients--gda">
+            0%
+           </span>
+          </span>
+         </li>
+         <li class="col-xs-6">
+          <span class="b-nutrients--item">
+           <span class="b-nutrients--name">
+            Angliavandeniai
+           </span>
+           <span class="b-nutrients--amount-wrap">
+            <span class="b-nutrients--amount">
+             41 g
+             <br/>
+            </span>
+           </span>
+           <span class="b-nutrients--gda">
+            15,8%
+           </span>
+          </span>
+         </li>
+         <li class="col-xs-6">
+          <span class="b-nutrients--item">
+           <span class="b-nutrients--name">
+            Cukrūs
+           </span>
+           <span class="b-nutrients--amount-wrap">
+            <span class="b-nutrients--amount">
+             38 g
+             <br/>
+            </span>
+           </span>
+           <span class="b-nutrients--gda">
+            42,2%
+           </span>
+          </span>
+         </li>
+         <li class="col-xs-6">
+          <span class="b-nutrients--item">
+           <span class="b-nutrients--name">
+            Baltymai
+           </span>
+           <span class="b-nutrients--amount-wrap">
+            <span class="b-nutrients--amount">
+             0,3 g
+             <br/>
+            </span>
+           </span>
+           <span class="b-nutrients--gda">
+            0,6%
+           </span>
+          </span>
+         </li>
+         <li class="col-xs-6">
+          <span class="b-nutrients--item">
+           <span class="b-nutrients--name">
+            Druska
+           </span>
+           <span class="b-nutrients--amount-wrap">
+            <span class="b-nutrients--amount">
+             0 g
+             <br/>
+            </span>
+           </span>
+           <span class="b-nutrients--gda">
+            0%
+           </span>
+          </span>
+         </li>
+        </ul>
+        <h3 class="b-product-info--info-3-title b-product-info--info-3-title-last">
+         Kita informacija
+        </h3>
+        <dl class="b-dl-align-left b-product-info--info1">
+         <dt>
+          Kilmės šalis:
+         </dt>
+         <dd>
+          Lietuva
+         </dd>
+         <dt>
+          Grynasis kiekis (g/ml):
+         </dt>
+         <dd>
+          900
+         </dd>
+         <dt>
+          Prekės ženklas:
+         </dt>
+         <dd>
+          SKANOVĖ
+         </dd>
+         <dt>
+          Tiekėjo kontaktai:
+         </dt>
+         <dd>
+          Aljasas, UAB
+         </dd>
+         <dt>
+          Tiekėjas:
+         </dt>
+         <dd>
+          <img alt="maxima" id="fti-maxima-logo-supplier" src="/Assets/Images/svg/maxima-logo.svg"/>
+         </dd>
+        </dl>
+        <div>
+         <p class="b-product-info--disclaimer">
+          Realios prekės išvaizda gali šiek tiek skirtis nuo esančios nuotraukoje. Prekės, kurias gausite, gali būti kitokioje pakuotėje bei kitokios išvaizdos ar formos. Informacija produkto aprašyme, kuri pateikiama elektroninėje parduotuvėje, yra bendro pobūdžio, todėl nėra tapati informacijai, nurodomai ant produkto pakuotės. Ant produkto pakuotės nurodoma informacija yra išsamesnė ir gali šiek tiek skirtis nuo informacijos, nurodomos elektroninėje parduotuvėje pateiktų prekių aprašymuose. Visada rekomenduojame perskaityti ir vadovautis informacija, esančia ant prekės pakuotės. Akcinių prekių kiekis yra ribotas.
+         </p>
+        </div>
+       </div>
+       <script>
+        /* <![CDATA[ /;var gtagData={"send_to":"","dynx_itemid":"000000000000524444","dynx_pagetype":"product"};/ ]]> */
+       </script>
+      </div>
+     </div>
+    </div>
+    <div class="tw-pt-8" id="b-footer--placeholder">
+    </div>
+   </div>
+  </div>
+  <div class="mobile-side-menu-placeholder">
+  </div>
+  <div class="next-reservation-modal-placeholder">
+  </div>
+  <div id="modal-placeholder">
+  </div>
+  <div id="snackbar-placeholder">
+  </div>
+  <div id="sub-modal-placeholder">
+  </div>
+  <script type="text/javascript">
+   //Check if user uses IE browser
+        var isIE = /MSIE|Trident/.test(window.navigator.userAgent);
+        if (isIE) {
+            document.querySelector(".b-ie-warning").style.display = "block";
+        }
+  </script>
+  <script type="text/javascript">
+   // These functions are used to determine if an error is likely caused by an ad blocker. It works by checking the breadcrumbs of the error. if there is a related network error with a URL that is likely blocked by an ad blocker, it will return true. Adblockers usually block requests to URLs that contain certain keywords like "ads", "tracking", "analytics", etc. adBlockKeywords is a list of common keywords that ad blockers block,- it should be updated as needed if this script will be helpful.
+    function isProbablyBlockedByAdblockNetworkError(error) {
+        const now = Date.now();
+
+        if (!error.breadcrumbs) {
+            return false;
+        }
+
+        for (let i = error.breadcrumbs.length - 1; i >= 0; i--) {
+            const breadcrumb = error.breadcrumbs[i];
+            if (!breadcrumb) continue;
+
+            if (breadcrumb.timestamp && now - breadcrumb.timestamp * 1000 > 5000) {
+                break;
+            }
+
+            if (isProbablyBlockedByAdblockBreadcrumb(breadcrumb)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    function isProbablyBlockedByAdblockBreadcrumb(breadcrumb) {
+        if (
+            breadcrumb.level !== 'error' ||
+            (breadcrumb.category !== 'xhr' && breadcrumb.category !== 'fetch')
+        ) {
+            return false;
+        }
+
+        const url = breadcrumb.data?.url;
+        if (!url) return false;
+
+        return isProbablyBlockedByAdblockUrl(url);
+    }
+
+    function isProbablyBlockedByAdblockUrl(url) {
+        // List of common URL patterns or keywords that ad blockers typically block
+        const adBlockKeywords = [
+            'ads',
+            'adservice',
+            'doubleclick',
+            'tracking',
+            'analytics',
+            'pixel',
+            'track',
+            'tagmanager',
+            'marketing',
+            'metrics',
+            'facebook',
+            'googletagmanager',
+            'banners',
+            'partner',
+            'advertisement',
+            'omnisend',
+            'promo'
+        ];
+
+        for (let keyword of adBlockKeywords) {
+            if (url.includes(keyword)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    function initSentry() {
+        var isDebug = "True".toLowerCase() === "true";
+
+        Sentry.init({
+            dsn: "https://3d9a795ddbdb4c718ada1f46f2f80699@sentry.barbora.lt/83",
+            release: "v1.36.5",
+            environment: "production-lt",
+            logger: "EShop.Client-JavaScript",
+            integrations: [
+                new Sentry.Integrations.CaptureConsole({
+                    levels: ['log', 'error'],
+                })
+            ],
+            ignoreUrls: [],
+            captureUnhandledRejections: false, //ignore UnhandledRejection errors
+            debug: isDebug,
+            ignoreErrors: [
+                'ResizeObserver loop completed with undelivered notifications.',
+                'ResizeObserver loop limit exceeded',
+                'Request failed with status 400 Bad Request for put cart/item?returnCartInfo=true',
+                'Request failed with status 400 Bad Request for post cart/item?returnCartInfo=true',
+                'Request failed with status 400 Bad Request for POST cart/ReserveDeliveryTimeSlot',
+                'Request failed with status 400 Bad Request for put cart/changeDeliveryAddress',
+                'Request failed with status 400 Bad Request for post user/address',
+                'Request failed with status 400 Bad Request for POST cart/submit',
+                'Error: Request failed with status 400 for POST cart(/submit)',
+                'fetchJson network error:',
+                'Request failed with status 400 Bad Request for POST userAuth/login',
+                "Cannot read properties of null (reading 'getItem')",
+                "Request failed with status 400 for POST cart/submit",
+                "Request failed with status 400 Bad Request for POST UserAuth/SocialLogin",
+                "Request failed with status 400 for POST userAuth/login",
+                "Loading chunk",
+                "Request failed with status 400  for POST userAuth/login"
+            ],
+            beforeSend(event) {
+                const agent = window.navigator.userAgent.toLowerCase();
+
+                // Broader check for AdsBot-Google and other Google crawlers
+                if (
+                    agent.includes('adsbot-google') ||
+                    agent.includes('google-read-aloud') ||
+                    agent.includes('googlebot')
+                ) {
+                    return null; // Block event from being sent to Sentry
+                }
+
+                // Check if the responseText contains "time_reservation_needed"
+                if (event.request && event.request.data) {
+                    const requestData = event.request.data;
+
+                    if (typeof requestData === 'string' && requestData.includes('time_reservation_needed')) {
+                        return null;
+                    }
+
+
+                    if (typeof requestData === 'object') {
+                        const responseString = JSON.stringify(requestData);
+                        if (responseString.includes('time_reservation_needed')) {
+                            return null;
+                        }
+                    }
+                }
+
+
+                if (isProbablyBlockedByAdblockNetworkError(event)) return null;
+
+                    // Return null to drop the console event as an Issue 
+                    // (but you'll still have it as a breadcrumb in the session timeline)
+                if (event.logger === 'console') return null;
+
+                return event;
+            }
+        });
+
+        var userId = "";
+        if (userId.length > 0) {
+            Sentry.configureScope(function (scope) {
+                scope.setUser({ "id": userId });
+            });
+        }
+
+        // Sentry.captureException(new Error("Test error to catch"));
+    }
+
+    let sentryCaptureConsoleLoadedFlag = false;
+    let sentryBundleLoadedFlag = false;
+
+    function sentryCaptureConsoleLoaded() {
+        sentryCaptureConsoleLoadedFlag = true;
+        initIfBothSentryScriptsReady();
+    }
+
+    function sentryBundleLoaded() {
+        sentryBundleLoadedFlag = true;
+        initIfBothSentryScriptsReady();
+    }
+
+    function initIfBothSentryScriptsReady() {
+        if (sentryCaptureConsoleLoadedFlag && sentryBundleLoadedFlag) {
+            initSentry();
+        }
+    }
+  </script>
+  <script crossorigin="anonymous" integrity="sha384-cI0DJfoJYwAWdWGIkWeCZV6ZwhPSN677wmPh2Ntr1JC75rn2aEZCL6xjPp36EE5c" onload="sentryCaptureConsoleLoaded()" src="https://browser.sentry-cdn.com/7.16.0/captureconsole.debug.min.js">
+  </script>
+  <script crossorigin="anonymous" integrity="sha384-70hBom53vQV6XVoqnEzSlfP8AYzEm6CSuti85YyRLtmm/jbx0GryCQ1z5StcQwsz" onload="sentryBundleLoaded()" src="https://browser.sentry-cdn.com/7.16.0/bundle.min.js">
+  </script>
+  <script type="text/javascript">
+   window.b_cart = null;
+  </script>
+  <script src="/build/main.concat.js?v=1.36.5" type="text/javascript">
+  </script>
+  <script data-cookieconsent="marketing" type="text/javascript">
+   const omnisendAccountID = "5fb50b2a4c7fa41a08d61946";
+        if (omnisendAccountID !== "")
+        {
+            window.omnisend = window.omnisend || [];
+            omnisend.push(["brandID", "5fb50b2a4c7fa41a08d61946"]);
+            omnisend.push(["track", "$pageViewed"]);
+
+            var e = document.createElement("script");
+            e.type = "text/javascript";
+            e.async = true;
+            e.src = "https://omnisnippet1.com/inshop/launcher-v2.js";
+            e.onload = function() {
+                if (window.omnisend && window.omnisend.identifyContact && window.b_user_info && window.b_user_info.loginName) {
+                    window.omnisend.identifyContact({
+                        email: window.b_user_info.loginName,
+                    });
+                }
+            };
+            document.getElementsByTagName("script")[0].parentNode.insertBefore(e, document.getElementsByTagName("script")[0]);
+        }
+  </script>
+  <script>
+   (function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9756a083ece7543c',t:'MTc1NjI0NTg4OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();
+  </script>
+  <script crossorigin="anonymous" data-cf-beacon='{"rayId":"9756a083ece7543c","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.8.0","token":"86a3e29eb5884f0fb3b97159cc596540"}' defer="" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015">
+  </script>
+ </body>
+</html>

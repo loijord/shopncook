@@ -1,0 +1,16 @@
+* 1kg paruoštų bulvių [item: bulvės]
+    * keptų
+    * apkeptų
+    * virtų
+* 1kg kefyro [item: kefyras]
+    * paprasto [item: kefyras]
+    * šaltibarščių [item: šaltibarščių kefyras]
+* 400ml pieno [item: pienas UAT]
+    * paprasto pieno [item: pienas]
+    * pieno UAT [item: pienas UAT]
+* 2 burokėliai [weight: 200g]
+* 2 trumpavaisiai agurkai [weight: 200g]
+* 3 kiaušiniai
+* 70g svogūnų laiškų [item: svogūnų laiškai]
+* džiovinti krapai
+* druska
