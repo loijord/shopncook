@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>index</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>collect_it</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7510,33 +7510,112 @@ a.anchor-link {
 </style>
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<main>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ef7d4d4c-1d71-41d4-b401-8da283b11854">
+<main><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=26d8d1b3-027e-4a13-a4a6-48f39cfa9338">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Tai yra projektas, kurio tikslas yra padėti pirkėjams kuo pigiau įsigyti norimų maisto prekių parduotuvėse bei efektyviai įvertinti, kokios yra namuose gaminamo maisto laiko ir pinigų sąnaudos. Gal būt net gi atrasti naujų neišbandytų maisto produktų ar receptų. 
-Pirkinių išlaidoms apskaičiuoti yra naudojamas webscrapping, t.y. automatinis būtinų duomenų, tokių kaip kaina, svoris ir kaina už svorio vienetą ištraukimas vien iš puslapio url. Kainos skenuojamos iš Maximos, Iki ir Rimi prekybos centrų e-parduotuvių. Iki e-parduotuvės domenas <code>https://www.lastmile.lt</code> leidžia visus duomenis ištraukti iš serverio paprastomis užklausomis, tuo tarpu Maximos ir Rimi domenai yra apsaugoti ir norint prieiti prie duomenų reikia inicijuoti prisijungimą per naršyklę (naudoju chrome driver).</p>
-<p>Svarbiausi projekto failai yra šie:</p>
-<ul>
-<li><a href="shopscraping.py"><code>shopscraping.py</code></a> - čia parašyti didžioji dalis kodų (su doktestais), skirtų ištraukti, apdoroti ir vaizdžiai pateikti duomenis</li>
-<li><a href="dashing.ipynb"><code>dashing.ipynb</code></a> - čia surašiau instrukcijas, kuriomis naudojuosi taupiam apsipirkinėjimui, susidedančiam iš kelių etapų:<ul>
-<li>Patikrinti, kurių produktų skubiai reikia, ir kurių produktų akcijas galima pamedžioti ilgesnį laiką</li>
-<li>Kiekvienam iš reikalingų produktų palyginti prekių kainas skirtinguose prekybos centruose ir pagal jas nuspręsti, ar jis reikalingas ir kokių tiksliai šio produkto prekių apsimoka ieškoti parduotuvėje.</li>
-<li>Susidaryti reikiamų produktų sąrašą, kad atėjus į prekybos centrą būtų galima greitai patikrinti, ar galima juos rasti ir neradus greitas nustatyti, kur labiausiai apsimoka ieškoti</li>
-</ul>
-</li>
-<li><a href="hunt_it.html"><code>hunt_it.ipynb</code></a> ir <a href="collect_it.html"><code>collect_it.ipynb</code></a> - detalus reguliariai atnaujinamas rūpimų produktų kainų palyginimas ir iš jų išsirinktų produktų sąrašas. Atnaujinu kiekvieną kartą prieš einant apsipirkti.</li>
-<li><a href="items.py"><code>items.py</code></a> - pagrindinis duomenų failas, į kurį susirašau visų kiekvieno produkto prekių puslapius, įtrauktus į reguliarų tikrinimą</li>
-<li><a href="product_history.csv"><code>product_history.csv</code></a> - failas, į kurį yra įrašoma kiekvienos reguliariai tikrinamos prekės kainos istorija</li>
-</ul>
-<p>Kiti failai kol kas ne tokie aktualūs</p>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span><span class="p">,</span> <span class="n">display</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'collect.md'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">'utf-8'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()))</span>
+</pre></div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=77e02ebf-83bb-4563-9bb4-fc96b65c31d4">
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-OutputArea-output" data-mime-type="text/markdown" tabindex="0">
+<table>
+<thead>
+<tr>
+<th style="text-align:right"></th>
+<th style="text-align:left">shop</th>
+<th style="text-align:left">image</th>
+<th style="text-align:left">title</th>
+<th style="text-align:left">price</th>
+<th style="text-align:left">price_per</th>
+<th style="text-align:left">off</th>
+<th style="text-align:right">weight</th>
+<th style="text-align:left">date</th>
+<th style="text-align:left">valid_until</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">0</td>
+<td style="text-align:left">MAXIMA</td>
+<td style="text-align:left"><img alt="No description has been provided for this image" height="60" src="https://cdn.barbora.lt/products/a1dda9b4-1afd-4589-b2eb-27ad1ee9e5ba_s.png" width="100"/></td>
+<td style="text-align:left"><a href="https://barbora.lt/produktai/avieciu-uogiene-skanove-900-g"><table width="100"><td> Aviečių uogienė SKANOVĖ, 900 g </td></table></a></td>
+<td style="text-align:left">5.19€</td>
+<td style="text-align:left">5.77€/kg</td>
+<td style="text-align:left"></td>
+<td style="text-align:right">0.899</td>
+<td style="text-align:left">2025-08-30</td>
+<td style="text-align:left">nan</td>
+</tr>
+<tr>
+<td style="text-align:right">1</td>
+<td style="text-align:left">IKI</td>
+<td style="text-align:left"><img alt="No description has been provided for this image" height="60" src="https://firebasestorage.googleapis.com/v0/b/lastmile-ui/o/import%2Fphotos%2Fconverted%2Fproduct%2FphotoUrl%2FOiGzdqIuls86njWsPYmw_V26P778_uF3DptJQvjXHqmno4Mal_mGXuPiCUhvf2UKrrSfiJ.webp?alt=media&amp;token=f6eda434-6c59-487f-a786-a6076f20c162" width="100"/></td>
+<td style="text-align:left"><a href="https://www.lastmile.lt/chain/PROMO-CashandCarry/product/MOCIUTES-avieciu-uogiene-600-g-V26P778"><table width="100"><td> MOČIUTĖS aviečių uogienė, 600 g </td></table></a></td>
+<td style="text-align:left">5.75€</td>
+<td style="text-align:left">9.58€/kg</td>
+<td style="text-align:left"></td>
+<td style="text-align:right">0.6</td>
+<td style="text-align:left">2025-08-24</td>
+<td style="text-align:left">nan</td>
+</tr>
+<tr>
+<td style="text-align:right">2</td>
+<td style="text-align:left">RIMI</td>
+<td style="text-align:left"><img alt="No description has been provided for this image" height="60" src="https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,q_auto:low,w_auto/d_ecommerce:backend-fallback.png/MAT_270939_KGM_LT" width="100"/></td>
+<td style="text-align:left"><a href="https://www.rimi.lt/e-parduotuve/lt/produktai/vaisiai-darzoves-ir-geles/vaisiai-ir-uogos/bananai/bananai-cavendish-20-cm-1kg/p/270939"><table width="100"><td> Bananai Cavendish, 20+cm , 1kg </td></table></a></td>
+<td style="text-align:left">1.39€</td>
+<td style="text-align:left">1.39€/kg</td>
+<td style="text-align:left"></td>
+<td style="text-align:right">1</td>
+<td style="text-align:left">2025-08-24</td>
+<td style="text-align:left">nan</td>
+</tr>
+<tr>
+<td style="text-align:right">3</td>
+<td style="text-align:left">MAXIMA</td>
+<td style="text-align:left"><img alt="No description has been provided for this image" height="60" src="https://cdn.barbora.lt/products/1d747537-6760-4098-ab24-8c658d1f9491_s.png" width="100"/></td>
+<td style="text-align:left"><a href="https://barbora.lt/produktai/bananai-1-kg"><table width="100"><td> Bananai, nuo 20 cm, 1 kg </td></table></a></td>
+<td style="text-align:left">1.39€</td>
+<td style="text-align:left">1.39€/kg</td>
+<td style="text-align:left"></td>
+<td style="text-align:right">1</td>
+<td style="text-align:left">2025-08-24</td>
+<td style="text-align:left">nan</td>
+</tr>
+<tr>
+<td style="text-align:right">4</td>
+<td style="text-align:left">MAXIMA</td>
+<td style="text-align:left"><img alt="No description has been provided for this image" height="60" src="https://cdn.barbora.lt/products/1f910506-fa6a-4ce8-947c-b0a43aeed8d9_s.png" width="100"/></td>
+<td style="text-align:left"><a href="https://barbora.lt/produktai/lietuviskos-sviezios-bulves-40-60-mm-1-kg-90335"><table width="100"><td> Lietuviškos šviežios bulvės, 40-60 mm, 1 kg </td></table></a></td>
+<td style="text-align:left"><div><strong>0.37€</strong></div><div><del>0.75€</del></div></td>
+<td style="text-align:left"><div><strong>0.37€/kg</strong></div><div><del>0.75€/kg</del></div></td>
+<td style="text-align:left">-50.7%</td>
+<td style="text-align:right">1</td>
+<td style="text-align:left">2025-08-24</td>
+<td style="text-align:left">2025-08-25</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d1d33c31-18a2-49ad-9e3d-4b8ce1deff9c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
